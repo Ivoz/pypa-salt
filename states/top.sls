@@ -11,3 +11,7 @@ base:
   "roles:salt":
     - match: grain
     - base.gitsync
+
+  "roles:web":
+    - match: grain
+    - nginx
