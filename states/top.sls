@@ -5,3 +5,6 @@ base:
     - base.sudo
     - users
     - monitoring
+
+  "roles:salt":
+    - base.gitsync
