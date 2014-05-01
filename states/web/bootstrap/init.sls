@@ -20,7 +20,7 @@ https://github.com/pypa/pip.git:
 
 /srv/bootstrap/www/get-pip.py:
   file.symlink:
-    - target: /srv/bootstraps/pip/contrib/get-pip.py
+    - target: /srv/bootstrap/pip/contrib/get-pip.py
 
 /etc/nginx/conf.d/bootstrap.pypa.io.conf:
   file.managed:
