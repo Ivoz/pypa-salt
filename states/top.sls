@@ -4,3 +4,4 @@ base:
     - base.sanity
     - base.sudo
     - users
+    - monitoring
