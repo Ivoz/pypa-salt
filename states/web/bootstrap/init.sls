@@ -41,3 +41,4 @@ https://bitbucket.org/pypa/setuptools:
     - template: jinja
     - context:
       port: {{ pillar["web"]["bootstrap"]["port"] }}
+      fastly_token: {{ pillar["fastly"]["header_token"] }}
