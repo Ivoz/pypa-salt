@@ -2,6 +2,7 @@
 include:
   - nginx
   - pkg.git
+  - pkg.hg
 
 /srv/bootstrap/www:
   file.directory:
