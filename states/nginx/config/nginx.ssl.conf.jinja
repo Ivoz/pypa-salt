@@ -2,5 +2,5 @@ ssl on;
 ssl_certificate     /etc/pki/tls/certs/{{ grains['fqdn'] }}.crt;
 ssl_certificate_key /etc/pki/tls/certs/{{ grains['fqdn'] }}.key;
 ssl_prefer_server_ciphers on;
-ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;
+ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
 ssl_ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AESGCM:RSA+AES:!3DES:!aNULL:!MD5:!DSS;
