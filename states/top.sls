@@ -5,6 +5,7 @@ base:
     - base.sudo
     - users
     - monitoring
+    - yum-cron
 
   "roles:salt":
     - match: grain
