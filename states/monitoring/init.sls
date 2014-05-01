@@ -20,12 +20,10 @@ rackspace-monitoring-agent:
     - require:
       - pkgrepo: monitoring-el6
 
-rackspace-configure:
   cmd.run:
     - name: "rackspace-monitoring-agent --username '{{ pillar['rackspace']['username'] }}' --apikey '{{ pillar['rackspace']['apikey'] }}' --setup"
     - unless: ls /etc/rackspace-monitoring-agent.cfg
 
-rackspace-monitoring-agent:
   service:
     - running
     - enable: True
