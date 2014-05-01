@@ -49,5 +49,5 @@ Bootstrap a Master
 Future
 ======
 
-Once SaltStack Helium has been released this should change to use the system
-packages.
+Once SaltStack Helium has been released and is in EPEL we can remove the git
+syncing stuff in base.gitsync.
