@@ -1,5 +1,5 @@
 
-/srv/srv/bootstraps/www:
+/srv/bootstraps/www:
   file.directory:
     - user: nginx
     - group: nginx
@@ -14,6 +14,6 @@ https://github.com/pypa/pip.git:
     - force: True
     - force_checkout: True
 
-/srv/srv/bootstraps/www/get-pip.py:
+/srv/bootstraps/www/get-pip.py:
   file.symlink:
     - target: /srv/bootstraps/pip/contrib/get-pip.py
