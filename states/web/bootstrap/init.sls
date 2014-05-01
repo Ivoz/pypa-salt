@@ -18,9 +18,21 @@ https://github.com/pypa/pip.git:
     - force: True
     - force_checkout: True
 
+https://bitbucket.org/pypa/setuptools:
+    hg.latest:
+      - rev: bootstrap
+      - target: /srv/bootstrap/setuptools
+      - user: nginx
+      - clean: True
+      - force: True
+
 /srv/bootstrap/www/get-pip.py:
   file.symlink:
     - target: /srv/bootstrap/pip/contrib/get-pip.py
+
+/srv/bootstrap/www/ez_setup.py:
+  file.symlink:
+    - target: /srv/bootstrap/setuptools/ez_setup.py
 
 /etc/nginx/conf.d/bootstrap.pypa.io.conf:
   file.managed:
