@@ -1,7 +1,7 @@
 
 include:
   - nginx
-  - git
+  - pkg.git
 
 /srv/bootstraps/www:
   file.directory:
