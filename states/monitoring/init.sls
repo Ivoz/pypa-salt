@@ -16,6 +16,7 @@ rackspace-package:
       - file: /etc/pki/rpm-gpg/RPM-GPG-KEY-RACKSPACE-MONITORING
 
   pkg.latest:
+    - name: rackspace-monitoring-agent
     - require:
       - pkgrepo: rackspace-package
 
