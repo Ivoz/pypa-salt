@@ -22,6 +22,8 @@ http {
 
     server_tokens off;
 
+    map_hash_bucket_size 128;
+
     include /etc/nginx/conf.d/*.conf;
 
     server {
