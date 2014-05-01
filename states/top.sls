@@ -7,4 +7,5 @@ base:
     - monitoring
 
   "roles:salt":
+    - match: grain
     - base.gitsync
