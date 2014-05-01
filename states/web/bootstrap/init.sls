@@ -1,4 +1,8 @@
 
+include:
+  - nginx
+  - git
+
 /srv/bootstraps/www:
   file.directory:
     - user: nginx
