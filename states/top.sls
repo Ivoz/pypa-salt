@@ -15,3 +15,4 @@ base:
   "roles:web":
     - match: grain
     - nginx
+    - web.bootstrap
