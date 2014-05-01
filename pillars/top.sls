@@ -1,5 +1,5 @@
 base:
-  '*':
+  "*":
     - users
 
   "roles:salt":
