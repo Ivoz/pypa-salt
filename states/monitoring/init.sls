@@ -6,7 +6,7 @@
     - group: root
     - mode: 444
 
-monitoring-el6:
+rackspace-package:
   pkgrepo.managed:
     - humanname: Rackspace Monitoring
     - baseurl: http://stable.packages.cloudmonitoring.rackspace.com/centos-6-x86_64
@@ -15,15 +15,16 @@ monitoring-el6:
     - require:
       - file: /etc/pki/rpm-gpg/RPM-GPG-KEY-RACKSPACE-MONITORING
 
-rackspace-monitoring-agent:
   pkg.latest:
     - require:
       - pkgrepo: monitoring-el6
 
+rackspace-configure:
   cmd.run:
     - name: "rackspace-monitoring-agent --username '{{ pillar['rackspace']['username'] }}' --apikey '{{ pillar['rackspace']['apikey'] }}' --setup"
     - unless: ls /etc/rackspace-monitoring-agent.cfg
 
+rackspace-monitoring-agent:
   service:
     - running
     - enable: True
