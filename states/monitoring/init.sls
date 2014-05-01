@@ -17,7 +17,7 @@ rackspace-package:
 
   pkg.latest:
     - require:
-      - pkgrepo: monitoring-el6
+      - pkgrepo: rackspace-package
 
 rackspace-configure:
   cmd.run:
