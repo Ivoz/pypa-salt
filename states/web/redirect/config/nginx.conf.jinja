@@ -1,0 +1,7 @@
+{% for old_domain, new_domain in redirects.items() %}
+server {
+    listen 80;
+    server_name {{ old_domain }};
+    rewrite  ^/(.*)$  http://{{ new_domain }}/$1 permanent;
+}
+{% endfor %}

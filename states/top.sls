@@ -15,3 +15,4 @@ base:
   "roles:web":
     - match: grain
     - web.bootstrap
+    - web.redirect
