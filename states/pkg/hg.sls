@@ -10,4 +10,4 @@ mercurial:
   pip.installed:
     - require:
       - pkg: python-pip
-      - pkg.purged: mercurial
+      - pkg: mercurial-rpm
