@@ -4,4 +4,5 @@ python-devel:
 
 python-pip:
   pkg.installed:
-    - require: pkg: python-devel
+    - require:
+      - pkg: python-devel
