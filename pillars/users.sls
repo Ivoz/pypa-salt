@@ -11,3 +11,9 @@ users:
       - wheel
     ssh_auth:
       - ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAtWlcfMDSuv88RRhWYjLRlryypTPTFeuUJqFjJNqWpk3HiIgW6MwKq68ZgTiyBeuwHDbpzz5ixl4OCb+k4nySfUoL1A+JR6ECGii11+go6zpl2I/CZDHEEv9hlhzGtxQXVgeHWu/8iP/2c0ya7kHpdsuU/S+1ex0SwJPMxionofpQFTqmwlRrDM/EWoTiRp70hJpoEg33R1KbD9RqtJ4jQXjpNq78Cza/7ZhnaFLCS/mBUSUQxBCf/jo5PI1UhR2X4MfV8EI//hQa/o4cKTjouswRf2H6PwqCPtJ4G1Lozu20YyMhgZmaXpzoOpgh3bLv8QLC6LXqwu7h8SEk2QcpDQ==
+  jaraco:
+    fullname: Jason R. Coombs
+    groups:
+      - wheel
+    ssh_auth:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAgEAkJkUsd0LJ3e/a4ahxP5o54xcEt7uJ47GCze1j3YAGW8KCtEu3bwOcgtFlIInrA8NMwm2P95JFeZHH4Cok7LZgLr/0JggTwlBnwKJOFYFKJTxAb6E95VQzJi7ELanBtbVZODA1WYhpMl5vUPvKwrsLss7bKzz2CKwPI/8uBqiVJ6cDh6w25cqAcolMFa86x8jARrClTCraRxi6MtzUpbW1LY4OjYJzlEGeLyKM1eH74A/nx9EP+AQlnS8NLlAl/+axyg7DHKynNA68xbBGuoGy1PocKsRsvVUs0URV5ocX5XAItFGZfjsyYCEX8EiMO8k44N+NN0HsxYYjt28x/a6SGgDZfvHp5Wq4tO0rq3Qbxhd8rV9MAfKhgLojM4DTKcLfupp5Z5erJAcc3cL+3mqhP/klApqkPDNE5wu+tfqe6G91AuTi5wIU7EfBqVJwVOzxckBwPqx/OHw4J2cvPm+eZeane/cuh1JIX3G1yTJ8FDRGRpvU1M25zjl3BWxNCD6nKYsAlNioSnsOoC44UGA7JDz5WTEndz2Z0jovZBBGDsM5VTxQ0aqqMqQ3BDUwD5E1c4+u/uLE8IF2edeUzkGsKJIgR2r++VMDmYyRXLobi1zEUidtBvWATyUAOohjBwiAZE8AB/G+FRO6Bs6eyRyYXQw+KhlzQ0OZsH6K6e4v/s= Jason R. Coombs 2014-01
