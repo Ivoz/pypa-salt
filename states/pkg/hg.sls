@@ -1,2 +1,13 @@
+
+include:
+  - pkg.pip
+
+mercurial-rpm:
+  pkg.purged:
+    - name: mercurial
+
 mercurial:
-  pkg.installed
+  pip.installed:
+    - require:
+      - pkg: python-pip
+      - pkg.purged: mercurial
