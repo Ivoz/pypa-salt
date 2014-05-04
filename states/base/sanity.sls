@@ -14,7 +14,7 @@ time-sync:
       - ntp
       - ntpdate
 
-ntpd:
+ntp:
   service:
     - running
     - enable: True
