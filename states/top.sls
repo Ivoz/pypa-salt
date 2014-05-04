@@ -5,7 +5,7 @@ base:
     - base.sudo
     - users
     - monitoring
-    # - yum-cron
+    - unattended-upgrades
     - firewall
 
   "roles:salt":

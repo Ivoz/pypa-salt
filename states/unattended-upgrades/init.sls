@@ -1,0 +1,4 @@
+
+unattended-upgrades:
+  pkg.installed
+
