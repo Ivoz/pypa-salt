@@ -55,7 +55,7 @@ Secret Pillar Data
 ==================
 
 Secret pillar data is stored in a separate git repository. That can be cloned
-by running ``git clone github.com:/srv/git/pypa-secrets.git``. Edit the files
+by running ``git clone salt.pypa.io:/srv/git/pypa-secrets.git``. Edit the files
 in that directory, commit them, and then push them back to update the secret
 pillar data.
 
