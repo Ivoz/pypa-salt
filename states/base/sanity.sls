@@ -19,10 +19,6 @@ ntp:
     - running
     - enable: True
 
-wheel:
-  group.present:
-    - system: True
-
 ubuntu:
   user.absent:
     - purge: True

@@ -2,7 +2,7 @@ base:
   "*":
     - base.autostate
     - base.sanity
-    - base.sudo
+    - wheel
     - users
     - monitoring
     - unattended-upgrades

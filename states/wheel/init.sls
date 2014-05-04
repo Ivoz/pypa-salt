@@ -1,4 +1,8 @@
 
+wheel:
+  group.present:
+    - system: True
+
 /etc/sudoers.d/wheel:
   file.managed:
     - user: root
