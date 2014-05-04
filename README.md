@@ -47,6 +47,17 @@ Bootstrap a Master
 # service salt-master restart
 ```
 
+Secret Pillar Data
+==================
+
+Secret pillar data is stored in a separate git repository. That can be cloned
+by running ``git clone github.com:/srv/git/pypa-secrets.git``. Edit the files
+in that directory, commit them, and then push them back to update the secret
+pillar data.
+
+Accessing this data will require a SSH account in the ``wheel`` group.
+
+
 Future
 ======
 
