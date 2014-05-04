@@ -44,3 +44,4 @@ https://bitbucket.org/pypa/setuptools:
       fastly_token: {{ pillar["fastly"]["header_token"] }}
     - require:
       - pkg: nginx
+      - file: /srv/bootstrap/www
