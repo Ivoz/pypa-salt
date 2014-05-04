@@ -42,3 +42,5 @@ https://bitbucket.org/pypa/setuptools:
     - context:
       port: {{ pillar["web"]["bootstrap"]["port"] }}
       fastly_token: {{ pillar["fastly"]["header_token"] }}
+    - require:
+      - pkg: nginx
