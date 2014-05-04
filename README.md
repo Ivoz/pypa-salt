@@ -50,5 +50,5 @@ Bootstrap a Master
 Future
 ======
 
-Once SaltStack Helium has been released and is in EPEL we can remove the git
+Once SaltStack Helium has been released and is in PPA we can remove the git
 syncing stuff in ``base.gitsync``.
