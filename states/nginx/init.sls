@@ -14,15 +14,6 @@ nginx-release:
       - file: /etc/apt/keys/APT-GPG-KEY-NGINX
 
 nginx:
-  user.present:
-    - system: True
-    - shell: /sbin/nologin
-    - groups:
-      - nginx
-    - require:
-      - group: nginx
-  group.present:
-    - system: True
   pkg:
     - installed
     - require:
