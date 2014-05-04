@@ -23,3 +23,9 @@ users:
       - wheel
     ssh_auth:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDPtycN2xnIziBn04Z25Mm1qL5Q3oYj0gZkVZkwpeEqtPKA+C6N8nSdf/UCnwHOlVBNZZW3JvcGnm20r3J5Fk217Uc3AiEr7Ikx2m1CJSvKjRgriMk7lM2iCcaJVnggXz53wDwH0biHAnvmPbioeuxnB8psrBrDhKEOHLro243YivHgWR73swRs13GfHKT6lAejL7qul5fuocoChnUc5ITFsZHK+4M68daDjI4oo43ysxkIkpGZmg4ORgr8jZFg1i3E+iI7wO6C87VhOLc3wKAjh5OtAuNF3qhtJdEI6Krq+huwf6ILab34AWuV5eUFdqbnBs+geOoHiBqDC8mg1u+R
+  ivoz:
+    fullname: Matthew Iversen
+    groups:
+      - wheel
+    ssh_auth:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDFKanjJD9IgTkYxXY5eHuemZ5ThhPRMPiWf0GfyqzP/j1k+7H5BiI2IbmupSyWZ3mjGGvtdOePx9sAul5J2kaEraRVDc60znFbd2vZ0iaiPZ7yVlQQKkXU5QhXMrpojp/YAwlfFKT6tyMXEV79lPe7shHwaDkVgYkkdEmJO9rDMUswm47WHwPsHem1J3kz7lf+p07mPQlNCPjtYqJ1kNIbO8G89mQCdyC70QYKRnBnosCK+QhkR4aSWdnpTYoPknJ64hjOqiEotEr9T9J8eOQE5Soo99PYUfesnjkVkAe07GaqO6t72f30EegDzkdyU35LW+wvom/mxu9TW1tNYrSt Ivoz
