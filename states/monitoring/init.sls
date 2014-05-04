@@ -1,19 +1,18 @@
 
-/etc/pki/rpm-gpg/RPM-GPG-KEY-RACKSPACE-MONITORING:
+
+/etc/apt/keys/APT-GPG-KEY-RACKSPACE-MONITORING:
   file.managed:
-    - source: salt://monitoring/RPM-GPG-KEY-RACKSPACE-MONITORING
+    - source: salt://monitoring/APT-GPG-KEY-RACKSPACE-MONITORING
     - user: root
     - group: root
     - mode: 444
 
 rackspace-package:
   pkgrepo.managed:
-    - humanname: Rackspace Monitoring
-    - baseurl: http://stable.packages.cloudmonitoring.rackspace.com/centos-6-x86_64
-    - gpgcheck: 1
-    - gpgkey: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-RACKSPACE-MONITORING
+    - name: deb http://stable.packages.cloudmonitoring.rackspace.com/ubuntu-14.04-x86_64 cloudmonitoring main
+    - key_url: file:///etc/apt/keys/APT-GPG-KEY-RACKSPACE-MONITORING
     - require:
-      - file: /etc/pki/rpm-gpg/RPM-GPG-KEY-RACKSPACE-MONITORING
+      - file: /etc/apt/keys/APT-GPG-KEY-RACKSPACE-MONITORING
 
   pkg.latest:
     - name: rackspace-monitoring-agent
@@ -24,9 +23,13 @@ rackspace-configure:
   cmd.run:
     - name: "rackspace-monitoring-agent --username '{{ pillar['rackspace']['username'] }}' --apikey '{{ pillar['rackspace']['apikey'] }}' --setup"
     - unless: ls /etc/rackspace-monitoring-agent.cfg
+    - require:
+      - pkg: rackspace-package
 
 rackspace-monitoring-agent:
   service:
     - running
     - enable: True
     - reload: True
+    - require:
+      - cmd: rackspace-configure

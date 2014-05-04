@@ -4,7 +4,7 @@ base:
     - base.sanity
     - base.sudo
     - users
-    # - monitoring
+    - monitoring
     # - yum-cron
     # - firewall
 
