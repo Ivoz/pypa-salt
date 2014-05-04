@@ -1,4 +1,7 @@
 
+include:
+  - pkg.apt
+
 /etc/apt/keys/APT-GPG-KEY-NGINX:
   file.managed:
     - source: salt://nginx/config/APT-GPG-KEY-NGINX
@@ -12,6 +15,7 @@ nginx-release:
     - key_url: file:///etc/apt/keys/APT-GPG-KEY-NGINX
     - require:
       - file: /etc/apt/keys/APT-GPG-KEY-NGINX
+      - pkg: python-apt
 
 nginx:
   pkg:
