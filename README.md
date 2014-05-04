@@ -42,8 +42,11 @@ Bootstrap a Master
 ```console
 # add-apt-repository ppa:saltstack/salt
 # apt-get update
-# apt-get install salt-master
+# apt-get install salt-master acl
 # wget https://github.com/pypa/pypa-salt/raw/master/bootstrap/configs/master.conf -O /etc/salt/master.d/local.conf
+# mkdir -p /srv/git/pypa-secrets.git
+# setfacl -R -m g:wheel:rwX /srv/git
+# find /srv/git -type d | xargs setfacl -R -m d:g:wheel:rwX
 # service salt-master restart
 ```
 
