@@ -47,6 +47,7 @@ Bootstrap a Master
 # service salt-master restart
 ```
 
+
 Secret Pillar Data
 ==================
 
