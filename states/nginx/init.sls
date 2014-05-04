@@ -29,7 +29,6 @@ nginx:
     - require:
       - file: /etc/nginx/nginx.conf
       - pkg: nginx
-      - user: nginx
 
 /etc/nginx/nginx.conf:
   file.managed:
