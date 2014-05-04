@@ -1,6 +1,7 @@
 base:
   "*":
     - users
+    - firewall
 
   "roles:salt":
     - match: grain

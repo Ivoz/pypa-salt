@@ -6,7 +6,7 @@ base:
     - users
     - monitoring
     # - yum-cron
-    # - firewall
+    - firewall
 
   "roles:salt":
     - match: grain
