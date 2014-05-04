@@ -6,7 +6,7 @@ niceties:
       - tmux
       - tree
       - bash-completion
-      - vim-enhanced
+      - vim
 
 time-sync:
   pkg.installed:
