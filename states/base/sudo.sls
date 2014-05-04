@@ -1,7 +1,4 @@
 
-include:
-  - base.wheel
-
 /etc/sudoers.d/wheel:
   file.managed:
     - user: root
