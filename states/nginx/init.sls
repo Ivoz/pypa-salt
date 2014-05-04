@@ -1,19 +1,17 @@
 
-/etc/pki/rpm-gpg/RPM-GPG-KEY-NGINX:
+/etc/apt/keys/APT-GPG-KEY-NGINX:
   file.managed:
-    - source: salt://nginx/config/RPM-GPG-KEY-NGINX
+    - source: salt://nginx/config/APT-GPG-KEY-NGINX
     - user: root
     - group: root
     - mode: 444
 
 nginx-release:
   pkgrepo.managed:
-    - humanname: nginx CentOS YUM repository
-    - baseurl: http://nginx.org/packages/centos/$releasever/$basearch/
-    - gpgcheck: 1
-    - gpgkey: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-NGINX
+    - name: deb http://nginx.org/packages/ubuntu/ trusty nginx
+    - key_url: file:///etc/apt/keys/APT-GPG-KEY-NGINX
     - require:
-      - file: /etc/pki/rpm-gpg/RPM-GPG-KEY-NGINX
+      - file: /etc/apt/keys/APT-GPG-KEY-NGINX
 
 nginx:
   user.present:
@@ -84,7 +82,7 @@ nginx:
 /etc/nginx/conf.d/ssl.conf:
   file.absent
 
-pyOpenSSL:
+python-openssl:
   pkg:
     - installed
 
@@ -93,4 +91,4 @@ self-signed-cert:
     - name: tls.create_self_signed_cert
     - CN: {{ grains['fqdn'] }}
     - require:
-      - pkg: pyOpenSSL
+      - pkg: python-openssl

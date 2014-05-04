@@ -12,7 +12,7 @@ base:
     - match: grain
     - base.gitsync
 
-  # "roles:web":
-  #   - match: grain
-  #   - web.bootstrap
+  "roles:web":
+    - match: grain
+    - web.bootstrap
   #   - web.redirect
