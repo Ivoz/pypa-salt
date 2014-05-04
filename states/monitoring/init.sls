@@ -1,4 +1,6 @@
 
+include:
+  - pkg.apt
 
 /etc/apt/keys/APT-GPG-KEY-RACKSPACE-MONITORING:
   file.managed:
@@ -13,6 +15,7 @@ rackspace-package:
     - key_url: file:///etc/apt/keys/APT-GPG-KEY-RACKSPACE-MONITORING
     - require:
       - file: /etc/apt/keys/APT-GPG-KEY-RACKSPACE-MONITORING
+      - pkg: python-apt
 
   pkg.latest:
     - name: rackspace-monitoring-agent
