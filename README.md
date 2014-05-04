@@ -7,9 +7,11 @@ Bootstrap a Minion
 First you need to install the salt minion, you can do that with:
 
 ```console
-# yum install salt-minion
-# mkdir -p /etc/salt/minion.d
+# add-apt-repository ppa:saltstack/salt
+# apt-get update
+# apt-get install salt-minion
 # wget https://github.com/pypa/pypa-salt/raw/master/bootstrap/configs/minion.conf -O /etc/salt/minion.d/local.conf
+# service salt-minion restart
 ```
 
 Then you need to edit ``/etc/salt/minion.d/local.conf`` to include the correct
@@ -24,8 +26,7 @@ Then you need to setup salt to connect to the master, you can do that with:
 Then go onto the salt master and run:
 
 ```console
-# salt-key -L  # Find the host name of the server you're connecting
-# salt-key -a <hostname>
+# salt-key -A
 ```
 
 Finally you can come back to the new minion and run:
@@ -39,11 +40,11 @@ Bootstrap a Master
 ==================
 
 ```console
-# yum install salt-master GitPython
-# mkdir -p /etc/salt/master.d
+# add-apt-repository ppa:saltstack/salt
+# apt-get update
+# apt-get install salt-master
 # wget https://github.com/pypa/pypa-salt/raw/master/bootstrap/configs/master.conf -O /etc/salt/master.d/local.conf
-# chkconfig salt-master on
-# service salt-master start
+# service salt-master restart
 ```
 
 Future
