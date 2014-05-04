@@ -1,6 +1,8 @@
 firewall:
-  http:
-    port: 80
+  services:
+    http:
+      ips_allow:
+        - 0.0.0.0/0
 
 web:
   redirect:
