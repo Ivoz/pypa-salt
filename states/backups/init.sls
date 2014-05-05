@@ -24,7 +24,7 @@ rackspace-backup-package:
 
 rackspace-backup-configure:
   cmd.run:
-    - name: "driveclient --configure --username '{{ pillar['rackspace']['username'] }}' --apikey '{{ pillar['rackspace']['apikey'] }}' --configure"
+    - name: "driveclient --username '{{ pillar['rackspace']['username'] }}' --apikey '{{ pillar['rackspace']['apikey'] }}' --configure"
     - unless: ls /etc/driveclient/bootstrap.json
     - require:
       - pkg: rackspace-backup-package
