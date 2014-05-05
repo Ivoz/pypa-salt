@@ -4,6 +4,7 @@ base:
     - base.sanity
     - wheel
     - users
+    - backups
     - monitoring
     - unattended-upgrades
     - firewall
