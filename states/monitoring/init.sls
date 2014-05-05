@@ -9,7 +9,7 @@ include:
     - group: root
     - mode: 444
 
-rackspace-package:
+rackspace-monitoring-package:
   pkgrepo.managed:
     - name: deb http://stable.packages.cloudmonitoring.rackspace.com/ubuntu-14.04-x86_64 cloudmonitoring main
     - key_url: file:///etc/apt/keys/APT-GPG-KEY-RACKSPACE-MONITORING
@@ -20,14 +20,14 @@ rackspace-package:
   pkg.latest:
     - name: rackspace-monitoring-agent
     - require:
-      - pkgrepo: rackspace-package
+      - pkgrepo: rackspace-monitoring-package
 
-rackspace-configure:
+rackspace-monitoring-configure:
   cmd.run:
     - name: "rackspace-monitoring-agent --username '{{ pillar['rackspace']['username'] }}' --apikey '{{ pillar['rackspace']['apikey'] }}' --setup"
     - unless: ls /etc/rackspace-monitoring-agent.cfg
     - require:
-      - pkg: rackspace-package
+      - pkg: rackspace-monitoring-package
 
 rackspace-monitoring-agent:
   service:
@@ -35,4 +35,4 @@ rackspace-monitoring-agent:
     - enable: True
     - reload: True
     - require:
-      - cmd: rackspace-configure
+      - cmd: rackspace-monitoring-configure
