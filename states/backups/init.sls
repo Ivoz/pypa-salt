@@ -4,7 +4,7 @@ include:
 
 /etc/apt/keys/APT-GPG-KEY-RACKSPACE-BACKUP:
   file.managed:
-    - source: salt://monitoring/APT-GPG-KEY-RACKSPACE-BACKUP
+    - source: salt://backups/APT-GPG-KEY-RACKSPACE-BACKUP
     - user: root
     - group: root
     - mode: 444
