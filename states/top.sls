@@ -7,7 +7,6 @@ base:
     - backups
     - monitoring
     - unattended-upgrades
-    - firewall
 
   "roles:salt":
     - match: grain
