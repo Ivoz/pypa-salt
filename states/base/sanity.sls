@@ -7,6 +7,7 @@ niceties:
       - tree
       - bash-completion
       - vim
+      - curl
 
 time-sync:
   pkg.installed:

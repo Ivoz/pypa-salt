@@ -35,6 +35,16 @@ https://bitbucket.org/pypa/setuptools:
   file.symlink:
     - target: /srv/bootstrap/setuptools/ez_setup.py
 
+refresh-pip:
+  cmd.run:
+    - name: 'curl -X https://bootstrap.pypa.io/get-pip.py'
+    - watch: https://github.com/pypa/pip.git
+
+refresh-setuptools:
+  cmd.run:
+    - name: 'curl -X https://bootstrap.pypa.io/ez_setup.py'
+    - watch: https://bitbucket.org/pypa/setuptools
+
 /etc/nginx/conf.d/bootstrap.pypa.io.conf:
   file.managed:
     - source: salt://web/bootstrap/config/nginx.conf.jinja
